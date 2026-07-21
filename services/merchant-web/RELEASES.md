@@ -4,3 +4,4 @@
 - squash-demo inner (ENG-1401)
 - squash-demo2 outer (ENG-1502)
 - squash-demo2 inner (ENG-1501)
+- ENG-1601: add in-memory LRU for checkout-token cache
