@@ -19,3 +19,10 @@ export async function getToken(
   tokenCache.add(key, tok);
   return tok;
 }
+
+// ENG-1603: expose local cache occupancy so the checkout dashboard can chart
+// hit-rate against how full the LRU is. Returns 0 when the flag is off and the
+// cache is never populated.
+export function checkoutCacheSize(): number {
+  return tokenCache.size;
+}
