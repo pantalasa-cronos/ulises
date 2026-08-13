@@ -21,4 +21,8 @@ export class LruCache<V> {
       this.map.delete(this.map.keys().next().value as string);
     }
   }
+  // ENG-1603: current occupancy, for cache-effectiveness observability.
+  get size(): number {
+    return this.map.size;
+  }
 }
