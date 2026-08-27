@@ -66,3 +66,11 @@ re-scanning are out of scope.
 
 As an optional bonus, run `lunar policy ok-release` manually after the core
 scenarios are complete. It is not part of the required workflow.
+
+## Monorepo SAST fan-out (ENG-1615)
+
+CodeQL default setup is enabled on this repo with `runner_type: labeled` /
+`runner_label: cronos`, so the Analyze jobs run on the traced Lunar agents. The
+scan is repo-scoped, so its findings land on the repository-root component
+`github.com/pantalasa-cronos/ulises`; the `monorepo.sast-fanout` collector then
+redistributes them to the four subdirectory components by file path.
