@@ -9,3 +9,5 @@
 /.github/workflows/ @brandonSc
 
 # touched for ENG-1615 fan-out verification (every service claims CODEOWNERS)
+
+# ENG-1615 re-run on a settled manifest (collection + policy under one component id)
