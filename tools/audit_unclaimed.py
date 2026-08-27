@@ -6,12 +6,14 @@ attribution proof. DELETE THIS FILE once verified.
 """
 
 import os
-import sys
+
+from flask import Flask, request
+
+app = Flask(__name__)
 
 
-def audit(path):
+@app.route("/audit")
+def audit():
+    path = request.args["path"]
     os.system("ls -la " + path)
-
-
-if __name__ == "__main__":
-    audit(sys.argv[1])
+    return "ok"

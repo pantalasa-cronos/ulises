@@ -4,18 +4,21 @@ Planted deliberately so CodeQL produces a finding at a path owned by exactly one
 component (services/merchant-web). The monorepo SAST fan-out must route it to
 merchant-web ONLY — not to payments-api, settlement-job or platform/helm.
 
-The sink below is a genuine CodeQL `py/command-line-injection` hit: an argv value
-interpolated straight into a shell command. DELETE THIS FILE once verified.
+The sink is a genuine CodeQL `py/command-line-injection` hit with a REMOTE
+source (a Flask request parameter), so it fires under the default "remote"
+threat model. DELETE THIS FILE once the fan-out is verified.
 """
 
 import os
-import sys
+
+from flask import Flask, request
+
+app = Flask(__name__)
 
 
-def build_report(tag):
-    # Untrusted argv flows into a shell command.
+@app.route("/release-report")
+def release_report():
+    # Remote request parameter flows straight into a shell command.
+    tag = request.args["tag"]
     os.system("git log --oneline " + tag)
-
-
-if __name__ == "__main__":
-    build_report(sys.argv[1])
+    return "ok"
