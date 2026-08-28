@@ -27,3 +27,5 @@
 # ENG-1615 run 8: no config churn since manifest 3e94f088 settled
 
 # ENG-1615 run 9: fan-out as codeql.monorepo-fanout sub-collector
+
+# ENG-1615 run 10: post-review — codeql sub-collector, discovery-first, guarded target read
