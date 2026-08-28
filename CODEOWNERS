@@ -15,3 +15,5 @@
 # ENG-1615 run 2: verify the fan-out with retried hub reads
 
 # ENG-1615 run 3: settled manifest, retry fix live, subcomponents pinned
+
+# ENG-1615 run 4: 300s read-retry budget, settled manifest
