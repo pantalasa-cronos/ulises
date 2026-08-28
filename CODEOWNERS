@@ -23,3 +23,5 @@
 # ENG-1615 run 6: SQL-scoped discovery, .native root-only, summary payload
 
 # ENG-1615 run 7: SQL discovery, component bound to 3e94f088, 900s budget
+
+# ENG-1615 run 8: no config churn since manifest 3e94f088 settled
