@@ -19,3 +19,5 @@
 # ENG-1615 run 4: 300s read-retry budget, settled manifest
 
 # ENG-1615 run 5: manifest 809b86bc (300s budget) bound to the root
+
+# ENG-1615 run 6: SQL-scoped discovery, .native root-only, summary payload
