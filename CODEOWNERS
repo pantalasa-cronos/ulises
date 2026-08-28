@@ -29,3 +29,5 @@
 # ENG-1615 run 9: fan-out as codeql.monorepo-fanout sub-collector
 
 # ENG-1615 run 10: post-review — codeql sub-collector, discovery-first, guarded target read
+
+# ENG-1615 run 11: 900s read budget
