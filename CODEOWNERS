@@ -13,3 +13,5 @@
 # ENG-1615 re-run on a settled manifest (collection + policy under one component id)
 
 # ENG-1615 run 2: verify the fan-out with retried hub reads
+
+# ENG-1615 run 3: settled manifest, retry fix live, subcomponents pinned
