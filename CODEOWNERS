@@ -7,27 +7,3 @@
 /platform/ @brandonSc
 /tools/service-generator/ @brandonSc
 /.github/workflows/ @brandonSc
-
-# touched for ENG-1615 fan-out verification (every service claims CODEOWNERS)
-
-# ENG-1615 re-run on a settled manifest (collection + policy under one component id)
-
-# ENG-1615 run 2: verify the fan-out with retried hub reads
-
-# ENG-1615 run 3: settled manifest, retry fix live, subcomponents pinned
-
-# ENG-1615 run 4: 300s read-retry budget, settled manifest
-
-# ENG-1615 run 5: manifest 809b86bc (300s budget) bound to the root
-
-# ENG-1615 run 6: SQL-scoped discovery, .native root-only, summary payload
-
-# ENG-1615 run 7: SQL discovery, component bound to 3e94f088, 900s budget
-
-# ENG-1615 run 8: no config churn since manifest 3e94f088 settled
-
-# ENG-1615 run 9: fan-out as codeql.monorepo-fanout sub-collector
-
-# ENG-1615 run 10: post-review — codeql sub-collector, discovery-first, guarded target read
-
-# ENG-1615 run 11: 900s read budget
